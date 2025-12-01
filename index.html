@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gir House Society</title>
+    <meta name="description" content="Community. Care. Celebration. Welcome to Gir House Society." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800&family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Dark Green Palette
+              primary: '#2E8B57', /* Sea Green / Forest */
+              secondary: '#1A4D2E', /* Deep Jungle */
+              accent: '#FFD700', /* Gold */
+              dark: '#020604', /* Almost Black Green */
+              light: '#E2E8F0', /* Light Grey Text */
+              'glass': 'rgba(10, 40, 20, 0.6)',
+              'glass-border': 'rgba(255, 255, 255, 0.1)',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Montserrat', 'sans-serif'],
+              hand: ['Sacramento', 'cursive'],
+            },
+            animation: {
+              'scroll-up': 'scrollUp 40s linear infinite',
+              'scroll-down': 'scrollDown 40s linear infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'tilt': 'tilt 10s infinite linear',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              scrollUp: {
+                '0%': { transform: 'translateY(0)' },
+                '100%': { transform: 'translateY(-50%)' },
+              },
+              scrollDown: {
+                '0%': { transform: 'translateY(-50%)' },
+                '100%': { transform: 'translateY(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              tilt: {
+                '0%, 50%, 100%': { transform: 'rotate(0deg)' },
+                '25%': { transform: 'rotate(1deg)' },
+                '75%': { transform: 'rotate(-1deg)' },
+              }
+            },
+            backgroundImage: {
+              'nature-gradient': 'linear-gradient(to bottom right, #020604, #0F2A1D)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #020604;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2E8B57;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #1A4D2E;
+      }
+      body {
+        background-color: #020604;
+        color: #E2E8F0;
+        overflow-x: hidden;
+      }
+      .glass-panel {
+        background: rgba(10, 35, 20, 0.5);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      }
+      .card-3d {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card-3d:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 20px 25px -5px rgba(0, 255, 100, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      /* Text gradients for dark mode */
+      .text-gradient {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(to right, #2E8B57, #4ADE80, #FFD700);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "three": "https://aistudiocdn.com/three@^0.181.2",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.2",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^11.0.8"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
